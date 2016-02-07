@@ -7,6 +7,13 @@ class AnimalShelter
   public int Age;
   public bool IsAdopted;
 
+  public AnimalShelter(string animalSpecies,int animalAge, bool animalIsAdopted)
+  {
+    Species = animalSpecies;
+    Age = animalAge;
+    IsAdopted = animalIsAdopted;
+  }
+
   public bool IsCat(){
     if(this.Species == "cat")
     {
@@ -35,25 +42,10 @@ public class Program
 {
   public static void Main()
   {
-    AnimalShelter snake = new AnimalShelter();
-    snake.Age = 3;
-    snake.Species = "snake";
-    snake.IsAdopted = false;
-
-    AnimalShelter doggie = new AnimalShelter();
-    doggie.Age = 2;
-    doggie.Species = "dog";
-    doggie.IsAdopted = false;
-
-    AnimalShelter cat = new AnimalShelter();
-    cat.Age = 4;
-    cat.Species = "cat";
-    cat.IsAdopted = false;
-
-    AnimalShelter fatcat = new AnimalShelter();
-    fatcat.Age = 5;
-    fatcat.Species = "cat";
-    fatcat.IsAdopted = false;
+    AnimalShelter snake = new AnimalShelter("snake",3,false);
+    AnimalShelter doggie = new AnimalShelter("dog",2,false);
+    AnimalShelter cat = new AnimalShelter("cat",4,false);
+    AnimalShelter fatcat = new AnimalShelter("cat",5,false);
 
     List<AnimalShelter> Animals = new List<AnimalShelter>() { snake, doggie, cat, fatcat };
 
